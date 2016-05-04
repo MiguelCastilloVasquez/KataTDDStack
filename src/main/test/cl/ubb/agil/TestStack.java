@@ -48,7 +48,7 @@ public class TestStack {
 		assertThat(tamanio,equalTo(2));
 	}
 	@Test
-	public void agregaUnoyHacerPopYRetornarUno(){
+	public void agregaUnoyHacerPopYRetornarUno()throws ExcepcionStack{
 		
 		stack.agregarNumero(1);
 		
@@ -57,7 +57,7 @@ public class TestStack {
 		assertThat(pop,equalTo(1));
 	}
 	@Test
-	public void agregarUnoYDosHacerPopYRetornarDos(){
+	public void agregarUnoYDosHacerPopYRetornarDos()throws ExcepcionStack{
 		
 		stack.agregarNumero(1);
 		stack.agregarNumero(2);
@@ -67,7 +67,7 @@ public class TestStack {
 		assertThat(pop,equalTo(2));
 	}
 	@Test
-	public void agregarTresYCuatroHacerPopDosVecesDevuelveCuatroYTres(){
+	public void agregarTresYCuatroHacerPopDosVecesDevuelveCuatroYTres()throws ExcepcionStack{
 		
 		stack.agregarNumero(3);
 		stack.agregarNumero(4);
@@ -77,6 +77,11 @@ public class TestStack {
 		
 		assertThat(pop1,equalTo(4));
 		assertThat(pop2,equalTo(3));
+	}
+	@Test(expected=ExcepcionStack.class)
+	public void excepcionAlhacerPopAStackVacio()throws ExcepcionStack{
+		int pop = stack.hacerPop();
+		
 	}
 	
 }

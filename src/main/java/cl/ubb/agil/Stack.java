@@ -22,9 +22,15 @@ public class Stack {
 	public int devuelveTamanio(){
 		return 2;
 	}
-	public int hacerPop(){
-		int numero = numeros[tamanio-1];
-		tamanio--;
-		return numero;
+	public int hacerPop()throws ExcepcionStack{
+		if(tamanio==0){
+			throw new ExcepcionStack();
+		}else{
+			int numero = numeros[tamanio-1];
+			tamanio--;
+			return numero;
+		}
+			
 	}
+		
 }
