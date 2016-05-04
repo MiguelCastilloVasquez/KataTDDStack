@@ -37,6 +37,7 @@ public class TestStack {
 		
 		assertThat(vacia,equalTo(false));
 	}
+	@Test
 	public void agregaUnoYDosYDevuelveTamanioDos(){
 		
 		stack.agregarNumero(1);
@@ -45,5 +46,14 @@ public class TestStack {
 		int tamanio = stack.devuelveTamanio();
 		
 		assertThat(tamanio,equalTo(2));
+	}
+	@Test
+	public void agregaUnoyDevuelveTamanioUno(){
+		
+		stack.agregarNumero(1);
+		
+		int tamanio = stack.devuelveTamanio();
+		
+		assertThat(tamanio,equalTo(1));
 	}
 }
