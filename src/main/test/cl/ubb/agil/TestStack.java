@@ -22,4 +22,15 @@ public class TestStack {
 		
 		assertThat(vacia,equalTo(false));
 	}
+	@Test 
+	public void agregarUnoYDosAStack(){
+		Stack stack = new Stack();
+		
+		stack.agregarNumero(1);
+		stack.agregarNumero(2);
+		
+		boolean vacia = stack.estaVacio();
+		
+		assertThat(vacia,equalTo(false));
+	}
 }
