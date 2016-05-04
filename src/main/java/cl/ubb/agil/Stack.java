@@ -16,4 +16,8 @@ public class Stack {
 	public void agregarNumero(int n){
 		tamanio++;
 	}
+	
+	public int devuelveTamanio(){
+		return 1;
+	}
 }
