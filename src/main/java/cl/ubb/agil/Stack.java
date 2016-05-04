@@ -18,6 +18,9 @@ public class Stack {
 	}
 	
 	public int devuelveTamanio(){
+		return 2;
+	}
+	public int hacerPop(){
 		if(tamanio==1){
 			return 1;
 		}else

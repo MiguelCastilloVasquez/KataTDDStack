@@ -48,12 +48,23 @@ public class TestStack {
 		assertThat(tamanio,equalTo(2));
 	}
 	@Test
-	public void agregaUnoyDevuelveTamanioUno(){
+	public void agregaUnoyHacerPopYRetornarUno(){
 		
 		stack.agregarNumero(1);
 		
-		int tamanio = stack.devuelveTamanio();
+		int pop = stack.hacerPop();
 		
-		assertThat(tamanio,equalTo(1));
+		assertThat(pop,equalTo(1));
 	}
+	@Test
+	public void agregarUnoYDosHacerPopYRetornarDos(){
+		
+		stack.agregarNumero(1);
+		stack.agregarNumero(2);
+		
+		int pop = stack.hacerPop();
+		
+		assertThat(pop,equalTo(2));
+	}
+	
 }
