@@ -1,6 +1,7 @@
 package cl.ubb.agil;
 
 public class Stack {
+	private int[] numeros = new int[2];
 	private int tamanio;
 	public Stack(){
 		tamanio=0;
@@ -15,15 +16,15 @@ public class Stack {
 	}
 	public void agregarNumero(int n){
 		tamanio++;
+		numeros[tamanio-1]=n;
 	}
 	
 	public int devuelveTamanio(){
 		return 2;
 	}
 	public int hacerPop(){
-		if(tamanio==1){
-			return 1;
-		}else
-			return 2;
+		int numero = numeros[tamanio-1];
+		tamanio--;
+		return numero;
 	}
 }
