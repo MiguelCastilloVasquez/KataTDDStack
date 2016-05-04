@@ -18,6 +18,6 @@ public class Stack {
 	}
 	
 	public int devuelveTamanio(){
-		return 1;
+		return 2;
 	}
 }

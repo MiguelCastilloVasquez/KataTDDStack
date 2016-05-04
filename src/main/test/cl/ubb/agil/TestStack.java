@@ -44,6 +44,6 @@ public class TestStack {
 		
 		int tamanio = stack.devuelveTamanio();
 		
-		assertThat(tamanio,equalTo(1));
+		assertThat(tamanio,equalTo(2));
 	}
 }
