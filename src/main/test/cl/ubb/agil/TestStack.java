@@ -13,5 +13,13 @@ public class TestStack {
 		
 		assertThat(vacia,equalTo(true));
 	}
-
+	@Test
+	public void agregarUnoAStack(){
+		Stack stack = new Stack();
+		
+		stack.agregarNumero(1);
+		boolean vacia= stack.estaVacio();
+		
+		assertThat(vacia,equalTo(false));
+	}
 }
