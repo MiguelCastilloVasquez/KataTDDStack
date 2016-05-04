@@ -66,5 +66,17 @@ public class TestStack {
 		
 		assertThat(pop,equalTo(2));
 	}
+	@Test
+	public void agregarTresYCuatroHacerPopDosVecesDevuelveCuatroYTres(){
+		
+		stack.agregarNumero(3);
+		stack.agregarNumero(4);
+		
+		int pop1= stack.hacerPop();
+		int pop2= stack.hacerPop();
+		
+		assertThat(pop1,equalTo(4));
+		assertThat(pop2,equalTo(3));
+	}
 	
 }
