@@ -14,9 +14,15 @@ public class Stack {
 		else 
 			return false;
 	}
-	public void agregarNumero(int n){
-		tamanio++;
-		numeros[tamanio-1]=n;
+	public void agregarNumero(int n)throws ExcepcionStack{
+		if(tamanio>1){
+			throw new ExcepcionStack();
+		}
+		else{
+			tamanio++;
+			numeros[tamanio-1]=n;
+		}
+		
 	}
 	
 	public int devuelveTamanio(){

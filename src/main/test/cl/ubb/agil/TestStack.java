@@ -20,7 +20,7 @@ public class TestStack {
 		assertThat(vacia,equalTo(true));
 	}
 	@Test
-	public void agregarUnoAStack(){
+	public void agregarUnoAStack()throws ExcepcionStack{
 		
 		stack.agregarNumero(1);
 		boolean vacia= stack.estaVacio();
@@ -28,7 +28,7 @@ public class TestStack {
 		assertThat(vacia,equalTo(false));
 	}
 	@Test 
-	public void agregarUnoYDosAStack(){
+	public void agregarUnoYDosAStack()throws ExcepcionStack{
 		
 		stack.agregarNumero(1);
 		stack.agregarNumero(2);
@@ -38,7 +38,7 @@ public class TestStack {
 		assertThat(vacia,equalTo(false));
 	}
 	@Test
-	public void agregaUnoYDosYDevuelveTamanioDos(){
+	public void agregaUnoYDosYDevuelveTamanioDos()throws ExcepcionStack{
 		
 		stack.agregarNumero(1);
 		stack.agregarNumero(2);
@@ -82,6 +82,13 @@ public class TestStack {
 	public void excepcionAlhacerPopAStackVacio()throws ExcepcionStack{
 		int pop = stack.hacerPop();
 		
+	}
+	@Test(expected=ExcepcionStack.class)
+	public void excepcionAlAgregarAStockLleno()throws ExcepcionStack{
+		stack.agregarNumero(1);
+		stack.agregarNumero(2);
+		stack.agregarNumero(3);
+
 	}
 	
 }
